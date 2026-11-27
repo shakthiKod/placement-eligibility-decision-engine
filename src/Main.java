@@ -10,10 +10,19 @@ public class Main {
         double percentage = scanner.nextDouble();
         int backlogs = scanner.nextInt();
         int graduationYear = scanner.nextInt();
+        int skillCount = scanner.nextInt();
 
-        Candidate candidate = new Candidate(name, percentage, backlogs, graduationYear);
+        String[] skills = new String[skillCount];
 
-        Job job = new Job("Infosys", "Java Developer", 65.0, 0, 2026);
+        for (int i = 0; i < skills.length; i++) {
+            skills[i] = scanner.next();
+        }
+
+        Candidate candidate = new Candidate(name, percentage, backlogs, graduationYear, skills);
+
+        String[] reqSkills = { "Java", "SQL" };
+
+        Job job = new Job("Infosys", "Java Developer", 65.0, 0, 2026, reqSkills);
         System.out.println();
         System.out.println("================================");
         System.out.println("PLACEMENT ELIGIBILITY RESULT");

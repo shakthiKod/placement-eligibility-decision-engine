@@ -2,7 +2,8 @@ public class EligibilityChecker {
     private EligibilityRule[] rules;
 
     public EligibilityChecker() {
-        rules = new EligibilityRule[] { new PercentageRule(), new BacklogRule(), new GraduationYearRule() };
+        rules = new EligibilityRule[] { new PercentageRule(), new BacklogRule(),
+                new GraduationYearRule(), new SkillRule() };
     }
 
     public boolean evaluate(Candidate candidate, Job job) {
